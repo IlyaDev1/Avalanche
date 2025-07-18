@@ -1,0 +1,15 @@
+[submodule "ApiGateway"]
+	path = ApiGateway
+	url = https://github.com/IlyaDev1/ApiGateway
+[submodule "SensorNode"]
+	path = SensorNode
+	url = https://github.com/IlyaDev1/SensorNode
+[submodule "Sensors"]
+	path = Sensors
+	url = https://github.com/IlyaDev1/Sensors
+[submodule "Client"]
+	path = Client
+	url = https://github.com/IlyaDev1/Client
+[submodule "Fact"]
+	path = Fact
+	url = https://github.com/IlyaDev1/Fact
