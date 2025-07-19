@@ -6,6 +6,7 @@
   <title>Система мониторинга лавинной опасности</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* Отступ для якорей, чтобы секции не скрывались под хедером */
     section[id] {
       scroll-margin-top: 80px;
     }
@@ -17,8 +18,8 @@
     <div class="container mx-auto flex flex-wrap items-center justify-between">
       <h1 class="text-xl sm:text-2xl font-bold">Мониторинг лавинной опасности</h1>
       <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 mt-2 sm:mt-0 text-sm sm:text-base">
-        <a href="#about" class="hover:underline">О проекте</a>
-        <a href="#demo" class="hover:underline">Демонстрация</a>
+        <a href="#about" class="hover:underline hidden sm:inline">О проекте</a>
+        <a href="#demo" class="hover:underline hidden sm:inline">Демонстрация</a>
         <a href="#architecture" class="hover:underline">Архитектура</a>
         <a href="#tech" class="hover:underline">Технологии</a>
         <a href="#monitoring" class="hover:underline">Мониторинг</a>
