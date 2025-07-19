@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Система мониторинга лавинной опасности</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Навигация -->
+  <nav class="bg-blue-600 text-white p-4 sticky top-0 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Мониторинг лавинной опасности</h1>
+      <div class="space-x-4">
+        <a href="#about" class="hover:underline">О проекте</a>
+        <a href="#architecture" class="hover:underline">Архитектура</a>
+        <a href="#tech" class="hover:underline">Технологии</a>
+        <a href="#monitoring" class="hover:underline">Мониторинг</a>
+        <a href="#contact" class="hover:underline">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Главный баннер -->
+  <section class="bg-blue-800 text-white py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Система мониторинга лавинной опасности</h2>
+      <p class="text-lg mb-6">Cистема для прогнозирования лавин на основе метеоданных</p>
+      <a href="#about" class="bg-white text-blue-800 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">Узнать больше</a>
+    </div>
+  </section>
+
+  <!-- О проекте -->
+  <section id="about" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">О проекте</h2>
+      <p class="text-lg mb-4">Система предназначена для анализа метеорологических данных и прогнозирования лавинной опасности в горных регионах. Она использует нейросеть Колмогорова-Арнольда (KAN) для точных прогнозов, что помогает спасательным службам принимать решения.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Цели проекта</h3>
+          <ul class="list-disc pl-6">
+            <li>Моделирование метеодатчиков</li>
+            <li>Прогнозирование лавинной опасности</li>
+            <li>Управление данными в PostgreSQL</li>
+            <li>Мониторинг качества через Grafana</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Ключевые особенности</h3>
+          <ul class="list-disc pl-6">
+            <li>Сбор и обработка метеоданных (температура, ветер, осадки)</li>
+            <li>REST API на FastAPI</li>
+            <li>Контейнеризация с Docker</li>
+            <li>Мониторинг с Grafana и Prometheus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Архитектура -->
+  <section id="architecture" class="bg-white py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Архитектура</h2>
+      <p class="text-lg mb-4">Проект реализован как микросервисная архитектура с использованием MQTT, FastAPI и PostgreSQL.</p>
+      <img src="images/arc.png" alt="Архитектура MVP" class="w-full max-w-3xl mx-auto mb-6">
+      <p class="text-lg mb-4">ERD-диаграмма базы данных:</p>
+      <img src="images/erd.png" alt="ERD-диаграмма" class="w-full max-w-3xl mx-auto">
+    </div>
+  </section>
+
+  <!-- Технологии -->
+  <section id="tech" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Технологии</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Языки и фреймворки</h3>
+          <p>Python, FastAPI, PyTorch, SQLAlchemy</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Контейнеризация</h3>
+          <p>Docker, Harbor</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Мониторинг</h3>
+          <p>Grafana, Prometheus, Postgres Exporter</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Мониторинг -->
+  <section id="monitoring" class="bg-white py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Мониторинг</h2>
+      <p class="text-lg mb-4">Мониторинг качества модели KAN осуществляется через Grafana, где отображается ошибка прогнозов.</p>
+      <img src="images/graf.png" alt="Grafana мониторинг" class="w-full max-w-3xl mx-auto mb-6">
+      <p class="text-lg mb-4">Состояние базы данных отслеживается через Postgres Exporter и Prometheus:</p>
+      <img src="images/psql_exp.png" alt="Postgres Exporter" class="w-full max-w-3xl mx-auto">
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Контакты</h2>
+      <p class="text-lg mb-4">Разработчик: Илья Коновалов</p>
+      <p class="text-lg mb-4">Email: <a href="mailto:neiluamaibi@mail.ru" class="text-blue-600 hover:underline">neiluamaibi@mail.ru</a></p>
+      <p class="text-lg mb-4">Telegram: <a href="https://t.me/IlyaKonovalov" class="text-blue-600 hover:underline">t.me/IlyaKonovalov</a></p>
+      <p class="text-lg">GitHub: <a href="https://github.com/IlyaDev1" class="text-blue-600 hover:underline">github.com/IlyaDev1</a></p>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Илья Коновалов. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>
